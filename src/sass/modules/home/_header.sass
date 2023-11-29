@@ -1,0 +1,18 @@
+@media only screen and (min-width: 769px)
+    header
+        .nav-item
+            &::after
+                content: ''
+                border-bottom: 3px solid blue
+                width: 90%
+                display: none
+
+            &:first-child
+                // color: red !important
+                &::after
+                    display: block
+
+            &:hover
+                // color: blue !important
+                &::after
+                    display: block

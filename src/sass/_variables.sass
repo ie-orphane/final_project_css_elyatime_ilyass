@@ -1,0 +1,27 @@
+@import ../../node_modules/bootstrap/scss/functions
+@import ../../node_modules/bootstrap/scss/variables
+
+// $dark: #123
+// $green: #1f6
+// $blue: #1ac
+
+// $colors: ("blue": $blue, "green": $green, "dark": $dark)
+
+// @each $name, $color in $colors
+//     .c-#{$name}
+//         color: $color
+
+$lighter: #f8f9fa
+$main: #edf1f3
+$blue: #91cce5
+$grey: #aeaeaf
+$dark: #212529
+
+$custom-colors: ("-light": $light, "-main": $main, "-blue": $blue, "-grey": $grey, "-dark": $dark)
+$theme-colors: map-merge($custom-colors, $theme-colors)
+
+
+$spacer: .25rem
+$spacers: (0: 0)
+@for $i from 1 through 20
+    $spacers: map-merge($spacers, ($i: $i * $spacer))
