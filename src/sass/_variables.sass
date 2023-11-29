@@ -11,17 +11,23 @@
 //     .c-#{$name}
 //         color: $color
 
-$lighter: #f8f9fa
-$main: #edf1f3
-$blue: #91cce5
-$grey: #aeaeaf
-$dark: #212529
+$lighter: #f9f9f9
+$light: #edf2ff
+$main: #4891da
+$dark: #1a76d1
+$darker: #2c2d3f
 
-$custom-colors: ("-light": $light, "-main": $main, "-blue": $blue, "-grey": $grey, "-dark": $dark)
+$custom-colors: ("-lighter": $lighter, "-light": $light, "-main": $main, "-dark": $dark, "-darker": $darker)
 $theme-colors: map-merge($custom-colors, $theme-colors)
-
 
 $spacer: .25rem
 $spacers: (0: 0)
 @for $i from 1 through 20
     $spacers: map-merge($spacers, ($i: $i * $spacer))
+
+@media only screen and (min-width: 1024px)
+    .w-lg-30
+        width: 30%
+
+    .w-lg-50
+        width: 50%
