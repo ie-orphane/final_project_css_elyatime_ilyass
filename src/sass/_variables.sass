@@ -25,6 +25,13 @@ $spacers: (0: 0)
 @for $i from 1 through 20
     $spacers: map-merge($spacers, ($i: $i * $spacer))
 
+@media only screen and (min-width: 426px) and (max-width: 1024px)
+    .w-md-30
+        width: 30%
+
+    .w-md-50
+        width: 45%
+
 @media only screen and (min-width: 1024px)
     .w-lg-30
         width: 30%

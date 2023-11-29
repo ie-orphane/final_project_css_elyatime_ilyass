@@ -1,5 +1,13 @@
 @charset "UTF-8";
 @import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
+@media only screen and (min-width: 426px) and (max-width: 1024px) {
+  .w-md-30 {
+    width: 30%;
+  }
+  .w-md-50 {
+    width: 45%;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .w-lg-30 {
     width: 30%;
@@ -18289,7 +18297,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1024px) {
   header .nav-item::after {
     content: "";
     border-bottom: 3px solid blue;
