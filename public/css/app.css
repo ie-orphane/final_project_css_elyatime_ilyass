@@ -9,7 +9,7 @@
   .w-md-30 {
     width: 30%;
   }
-  .w-md-50 {
+  .w-md-45 {
     width: 45%;
   }
   .w-md-100 {
@@ -17,6 +17,12 @@
   }
 }
 @media only screen and (min-width: 1024px) {
+  .w-lg-20 {
+    width: 20%;
+  }
+  .w-lg-25 {
+    width: 24%;
+  }
   .w-lg-30 {
     width: 30%;
   }
@@ -24,7 +30,7 @@
     width: 50%;
   }
   .w-lg-80 {
-    width: 80%;
+    width: 85%;
   }
   .w-lg-100 {
     width: 100%;
@@ -18324,6 +18330,30 @@ textarea.form-control-lg {
   header .nav-item:hover::after {
     display: block;
   }
+}
+main input {
+  outline: none;
+}
+
+footer h4::after, footer .h4::after {
+  content: "";
+  border-bottom: solid 3px white;
+  width: 17.5%;
+  display: flex;
+  padding-top: 1rem;
+}
+footer .footer-link:hover {
+  padding-left: 0.5rem;
+}
+footer .footer-social:hover {
+  color: var(--bs--dark);
+  background: #fff;
+}
+footer input {
+  outline: none;
+}
+footer input::placeholder {
+  color: white;
 }
 
 /*# sourceMappingURL=app.css.map */
