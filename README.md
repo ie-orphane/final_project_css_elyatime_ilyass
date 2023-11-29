@@ -2,7 +2,8 @@
 
 <!-- TODO
     ^ header : nav-link :  color blue : first-child + hover
-    ^ main : section #9 : card : fix the center problem
+    ^ main : section #9 : card : fix the center problem & responsive mobile
+    ^ main : section #12 : email : should be longer
 
 -->
 
