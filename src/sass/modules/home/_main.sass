@@ -3,6 +3,25 @@ main
     input
         outline: none
 
-    .section5
+    .blockqoute-bg
+        background-image: url(../images/blockqoute-bg.jpg)
+
+    .call-bg
         background-image: url(../images/call-bg.jpg)
+
+    .overlay
         background-size: cover
+        background-attachment: fixed
+        position: relative
+
+        &::before
+            content: ""
+            background-color: var(--bs--dark)
+            height: 100%
+            width: 100%
+            position: absolute
+            top: 0
+            left: 0
+            opacity: .75
+
+

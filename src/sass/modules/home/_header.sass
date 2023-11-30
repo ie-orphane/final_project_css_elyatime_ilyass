@@ -3,16 +3,12 @@
         .nav-item
             &::after
                 content: ''
-                border-bottom: 3px solid blue
-                width: 90%
-                display: none
+                border-bottom: 3px solid var(--bs--dark)
+                width: 10%
+                transition: .7s
 
-            &:first-child
+            &:first-child, &:hover
                 // color: red !important
                 &::after
                     display: block
-
-            &:hover
-                // color: blue !important
-                &::after
-                    display: block
+                    width: 90%

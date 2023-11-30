@@ -18334,15 +18334,13 @@ textarea.form-control-lg {
 @media only screen and (min-width: 1024px) {
   header .nav-item::after {
     content: "";
-    border-bottom: 3px solid blue;
+    border-bottom: 3px solid var(--bs--dark);
+    width: 10%;
+    transition: 0.7s;
+  }
+  header .nav-item:first-child::after, header .nav-item:hover::after {
+    display: block;
     width: 90%;
-    display: none;
-  }
-  header .nav-item:first-child::after {
-    display: block;
-  }
-  header .nav-item:hover::after {
-    display: block;
   }
 }
 main {
@@ -18351,9 +18349,26 @@ main {
 main input {
   outline: none;
 }
-main .section5 {
+main .blockqoute-bg {
+  background-image: url(../images/blockqoute-bg.jpg);
+}
+main .call-bg {
   background-image: url(../images/call-bg.jpg);
+}
+main .overlay {
   background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+main .overlay::before {
+  content: "";
+  background-color: var(--bs--dark);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.75;
 }
 
 footer h4::after, footer .h4::after {
