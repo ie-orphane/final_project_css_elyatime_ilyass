@@ -13,11 +13,13 @@
 
 $lighter: #f9f9f9
 $light: #edf2ff
+$lightgrey: #eee
+$grey:  #999
 $main: #4891da
 $dark: #1a76d1
 $darker: #2c2d3f
 
-$custom-colors: ("-lighter": $lighter, "-light": $light, "-main": $main, "-dark": $dark, "-darker": $darker)
+$custom-colors: ("-lighter": $lighter, "-light": $light, "-main": $main, "-dark": $dark, "-darker": $darker, "-grey": $grey, "-lightgrey": $lightgrey)
 $theme-colors: map-merge($custom-colors, $theme-colors)
 
 $spacer: .25rem
@@ -39,6 +41,13 @@ $spacers: (0: 0)
 
 .flex-1
     flex: 1
+    
+@media only screen and (min-width: 469px)
+    .flex-2
+        flex: 0 0 calc( 77% / 2 )
+
+    .flex-4
+        flex: 0 0 calc( 77% + 2rem )
 
 .bg-fixed
     background-attachment: fixed
