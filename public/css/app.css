@@ -37,6 +37,9 @@
   .w-lg-30 {
     width: 30% !important;
   }
+  .w-lg-35_5 {
+    width: 35.5% !important;
+  }
   .w-lg-50 {
     width: 50% !important;
   }
@@ -18342,8 +18345,15 @@ textarea.form-control-lg {
     display: block;
   }
 }
+main {
+  margin-top: 63px;
+}
 main input {
   outline: none;
+}
+main .section5 {
+  background-image: url(../images/call-bg.jpg);
+  background-size: cover;
 }
 
 footer h4::after, footer .h4::after {
