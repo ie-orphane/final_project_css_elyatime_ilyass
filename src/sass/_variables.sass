@@ -25,35 +25,44 @@ $spacers: (0: 0)
 @for $i from 1 through 20
     $spacers: map-merge($spacers, ($i: $i * $spacer))
 
+.w-fit-content
+    width: fit-content
+
+.flex-1
+    flex: 1
+
 @media only screen and (max-width: 426px)
     .w-sm-100
-        width: 100%
+        width: 100% !important
 
 @media only screen and (min-width: 426px) and (max-width: 1024px)
+    .flex-lg-1
+        flex: 1
+
     .w-md-30
-        width: 30%
+        width: 30% !important
 
     .w-md-45
-        width: 45%
+        width: 45% !important
 
     .w-md-100
-        width: 100%
+        width: 100% !important
 
 @media only screen and (min-width: 1024px)
     .w-lg-20
-        width: 20%
+        width: 20% !important
 
     .w-lg-24
-        width: 24%
+        width: 24% !important
 
     .w-lg-30
-        width: 30%
+        width: 30% !important
 
     .w-lg-50
-        width: 50%
+        width: 50% !important
 
     .w-lg-90
-        width: 90%
+        width: 90% !important
 
     .w-lg-100
-        width: 100%
+        width: 100% !important
