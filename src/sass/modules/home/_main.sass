@@ -23,7 +23,88 @@ main
             top: 0
             left: 0
             opacity: .75
-            
-    //  class="p-lg-20 py-10 px-6 d-flex flex-column align-items-center gap-16"
+
     section:nth-child(2)
-        
+        padding: 2.5rem 1.5rem
+        gap: 4rem
+
+        .section2-container
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 3rem
+
+            .section2-heading
+                display: flex
+                flex-direction: column
+                align-items: center
+                text-align: center
+
+                p
+                    opacity: 50%
+                    font-weight: medium
+
+            .section2-items
+                display: flex
+                gap: 2rem
+
+                .section2-item
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    text-align: center
+                    gap: 1rem
+
+                    p
+                        opacity: 75%
+
+                    .item-icon
+                        border: 1px solid #0000001c
+                        border-radius: 50%
+                        padding: 1.75rem 1.5rem
+
+                        i
+                            color: var(--bs--dark)
+
+                    &:nth-child(2)
+                        position: relative
+                        &::before, &::after
+                            content: ""
+                            border-bottom: 3px dotted var(--bs--dark)
+                            position: absolute
+                            top: 60px
+                            width: 118px
+
+                        &::after
+                            left: -72px
+
+                        &::before
+                            right: -72px
+
+@media only screen and (min-width: 1024px)
+    main
+        section:nth-child(2)
+            padding: 5rem
+
+            .section2-heading
+                width: 50%
+
+@media only screen and (max-width: 426px)
+    main
+        section:nth-child(2) 
+            .section2-container 
+                .section2-items
+                    flex-direction: column
+
+                    .section2-item:nth-child(2)
+                        &::after, &::before
+                            border: none
+
+@media only screen and (min-width: 426px) and (max-width: 1024px)
+    main
+        section:nth-child(2) 
+            .section2-container 
+                .section2-items
+                    .section2-item:nth-child(2)
+                        &::after, &::before
+                            border: none
