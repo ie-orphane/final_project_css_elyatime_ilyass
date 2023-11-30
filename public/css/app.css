@@ -18357,7 +18357,6 @@ main .call-bg {
 }
 main .overlay {
   background-size: cover;
-  background-attachment: fixed;
   position: relative;
 }
 main .overlay::before {
