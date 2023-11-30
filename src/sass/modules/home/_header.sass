@@ -1,14 +1,20 @@
 @media only screen and (min-width: 1024px)
     header
         .nav-item
+            position: relative
+
             &::after
                 content: ''
-                border-bottom: 3px solid var(--bs--dark)
-                width: 10%
+                border-bottom: 4px solid var(--bs--dark)
+                border-radius: 5px
+                width: 0
+                position: absolute
+                left: 0
+                top: 49.5px
                 transition: .7s
+                visibility: hidden
 
             &:first-child, &:hover
-                // color: red !important
                 &::after
-                    display: block
+                    visibility: visible
                     width: 90%

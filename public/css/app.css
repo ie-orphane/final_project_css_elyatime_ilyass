@@ -1,11 +1,27 @@
 @charset "UTF-8";
 @import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
+.px--5 {
+  padding: 0rem 0.25rem;
+}
+
 .w-fit-content {
   width: fit-content;
 }
 
+.h-14px {
+  height: 14px;
+}
+
+.place-items-center {
+  place-items: center;
+}
+
 .flex-1 {
   flex: 1;
+}
+
+.bg-fixed {
+  background-attachment: fixed;
 }
 
 @media only screen and (max-width: 426px) {
@@ -18332,14 +18348,22 @@ textarea.form-control-lg {
   }
 }
 @media only screen and (min-width: 1024px) {
+  header .nav-item {
+    position: relative;
+  }
   header .nav-item::after {
     content: "";
-    border-bottom: 3px solid var(--bs--dark);
-    width: 10%;
+    border-bottom: 4px solid var(--bs--dark);
+    border-radius: 5px;
+    width: 0;
+    position: absolute;
+    left: 0;
+    top: 49.5px;
     transition: 0.7s;
+    visibility: hidden;
   }
   header .nav-item:first-child::after, header .nav-item:hover::after {
-    display: block;
+    visibility: visible;
     width: 90%;
   }
 }
@@ -18426,6 +18450,18 @@ main section:nth-child(2) .section2-container .section2-items .section2-item:nth
 }
 main section:nth-child(2) .section2-container .section2-items .section2-item:nth-child(2)::before {
   right: -72px;
+}
+main section:nth-child(4) h3, main section:nth-child(4) .h3 {
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+main section:nth-child(4) h3::before, main section:nth-child(4) .h3::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 7.5%;
+  border-bottom: solid 3px #1a76d1;
 }
 
 @media only screen and (min-width: 1024px) {

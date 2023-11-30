@@ -11,7 +11,6 @@ main
 
     .overlay
         background-size: cover
-        // background-attachment: fixed
         position: relative
 
         &::before
@@ -81,6 +80,22 @@ main
                         &::before
                             right: -72px
 
+    section:nth-child(4)
+        h3
+            position: relative
+            padding-bottom: .75rem 
+            &::before
+                position: absolute
+                content: ""
+                left: 0
+                bottom: 0
+                // height: 2px
+                width: 7.5%
+                // background: #1a76d1
+                // margin: 1rem
+                // padding-top: 10rem
+                border-bottom: solid 3px #1a76d1
+
 @media only screen and (min-width: 1024px)
     main
         section:nth-child(2)
@@ -91,8 +106,8 @@ main
 
 @media only screen and (max-width: 426px)
     main
-        section:nth-child(2) 
-            .section2-container 
+        section:nth-child(2)
+            .section2-container
                 .section2-items
                     flex-direction: column
 
@@ -102,8 +117,8 @@ main
 
 @media only screen and (min-width: 426px) and (max-width: 1024px)
     main
-        section:nth-child(2) 
-            .section2-container 
+        section:nth-child(2)
+            .section2-container
                 .section2-items
                     .section2-item:nth-child(2)
                         &::after, &::before
