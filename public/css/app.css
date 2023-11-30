@@ -18370,7 +18370,6 @@ main .overlay::before {
   left: 0;
   opacity: 0.75;
 }
-
 footer h4::after, footer .h4::after {
   content: "";
   border-bottom: solid 3px white;
