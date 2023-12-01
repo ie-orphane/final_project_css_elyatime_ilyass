@@ -4,6 +4,14 @@ main
         input
             outline: none
 
+    section:first-child
+        .bg-slider1
+            background-image: url(../images/slider.jpg)
+        .bg-slider2
+            background-image: url(../images/slider2.jpg)
+        .bg-slider3
+            background-image: url(../images/slider3.jpg)
+
     .blockqoute-bg
         background-image: url(../images/blockqoute-bg.jpg)
 
@@ -84,7 +92,7 @@ main
     section:nth-child(4)
         h3
             position: relative
-            padding-bottom: .75rem 
+            padding-bottom: .75rem
             &::before
                 position: absolute
                 content: ""
@@ -124,3 +132,60 @@ main
                     .section2-item:nth-child(2)
                         &::after, &::before
                             border: none
+
+// .sec1
+//     .alldiv
+//         height: 33rem
+//         .alldiv1
+//             height: 33rem
+//             .div11
+//                 .d2
+//                     height: 36rem
+//                     width: 56rem
+//                     h1
+//                         width: 36rem
+//                     p
+//                         width: 36rem
+//                     div
+//                         width: 32rem
+//                         .button1
+//                             width: 12rem
+//                             height: 3rem
+//                         .button2
+//                             width: 8rem
+//                             height: 3rem
+    button
+        .slide
+            width: 3rem
+            height: 3rem
+
+@media only screen and (max-width: 426px)
+
+    .sec1
+        width: 100vw !important
+        height: 50vh
+        .alldiv
+            .alldiv1
+                .div11
+                    .d1
+                        width: 40rem
+                        background-size: contain
+                        background-repeat: no-repeat
+                        .d2
+                            height: 36rem
+                            width: 56rem
+                            h1
+                                font-size: x-large
+                                width: 26rem
+                            p
+                                width: 22rem
+                            div
+                                width: 26rem
+                                .button1
+                                    width: 80vw
+                                .button2
+                                    width: 80vw
+                .left
+                    display: none
+                .right
+                    display: none

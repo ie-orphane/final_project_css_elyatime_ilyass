@@ -20,6 +20,10 @@
   flex: 1;
 }
 
+.bg-size-cover {
+  background-size: cover;
+}
+
 @media only screen and (min-width: 469px) {
   .flex-2 {
     flex: 0 0 38.5%;
@@ -33,16 +37,25 @@
 }
 
 @media only screen and (max-width: 426px) {
+  .h-sm-fit-content {
+    height: fit-content;
+  }
   .w-sm-100 {
     width: 100% !important;
   }
 }
 @media only screen and (min-width: 426px) and (max-width: 1024px) {
+  .h-md-full {
+    height: calc(100vh - 63px);
+  }
   .flex-lg-1 {
     flex: 1;
   }
   .w-md-30 {
     width: 30% !important;
+  }
+  .w-md-50 {
+    width: 50% !important;
   }
   .w-md-45 {
     width: 45% !important;
@@ -52,6 +65,9 @@
   }
 }
 @media only screen and (min-width: 1024px) {
+  .h-lg-full {
+    height: calc(100vh - 63px);
+  }
   .w-lg-20 {
     width: 20% !important;
   }
@@ -18569,6 +18585,15 @@ main {
 main section:last-child input {
   outline: none;
 }
+main section:first-child .bg-slider1 {
+  background-image: url(../images/slider.jpg);
+}
+main section:first-child .bg-slider2 {
+  background-image: url(../images/slider2.jpg);
+}
+main section:first-child .bg-slider3 {
+  background-image: url(../images/slider3.jpg);
+}
 main .blockqoute-bg {
   background-image: url(../images/blockqoute-bg.jpg);
 }
@@ -18682,6 +18707,43 @@ main section:nth-child(11) textarea {
 @media only screen and (min-width: 426px) and (max-width: 1024px) {
   main section:nth-child(2) .section2-container .section2-items .section2-item:nth-child(2)::after, main section:nth-child(2) .section2-container .section2-items .section2-item:nth-child(2)::before {
     border: none;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .sec1 {
+    width: 100vw !important;
+    height: 50vh;
+  }
+  .sec1 .alldiv .alldiv1 .div11 .d1 {
+    width: 40rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .sec1 .alldiv .alldiv1 .div11 .d1 .d2 {
+    height: 36rem;
+    width: 56rem;
+  }
+  .sec1 .alldiv .alldiv1 .div11 .d1 .d2 h1, .sec1 .alldiv .alldiv1 .div11 .d1 .d2 .h1 {
+    font-size: x-large;
+    width: 26rem;
+  }
+  .sec1 .alldiv .alldiv1 .div11 .d1 .d2 p {
+    width: 22rem;
+  }
+  .sec1 .alldiv .alldiv1 .div11 .d1 .d2 div {
+    width: 26rem;
+  }
+  .sec1 .alldiv .alldiv1 .div11 .d1 .d2 div .button1 {
+    width: 80vw;
+  }
+  .sec1 .alldiv .alldiv1 .div11 .d1 .d2 div .button2 {
+    width: 80vw;
+  }
+  .sec1 .alldiv .alldiv1 .left {
+    display: none;
+  }
+  .sec1 .alldiv .alldiv1 .right {
+    display: none;
   }
 }
 footer h4::after, footer .h4::after {

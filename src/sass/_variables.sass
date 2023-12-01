@@ -1,20 +1,10 @@
 @import ../../node_modules/bootstrap/scss/functions
 @import ../../node_modules/bootstrap/scss/variables
 
-// $dark: #123
-// $green: #1f6
-// $blue: #1ac
-
-// $colors: ("blue": $blue, "green": $green, "dark": $dark)
-
-// @each $name, $color in $colors
-//     .c-#{$name}
-//         color: $color
-
 $lighter: #f9f9f9
 $light: #edf2ff
 $lightgrey: #eee
-$grey:  #999
+$grey: #999
 $main: #4891da
 $dark: #1a76d1
 $darker: #2c2d3f
@@ -41,7 +31,10 @@ $spacers: (0: 0)
 
 .flex-1
     flex: 1
-    
+
+.bg-size-cover
+    background-size: cover
+
 @media only screen and (min-width: 469px)
     .flex-2
         flex: 0 0 calc( 77% / 2 )
@@ -52,16 +45,27 @@ $spacers: (0: 0)
 .bg-fixed
     background-attachment: fixed
 
+// Mobile
 @media only screen and (max-width: 426px)
+    .h-sm-fit-content
+        height: fit-content
+
     .w-sm-100
         width: 100% !important
 
+// Tablet
 @media only screen and (min-width: 426px) and (max-width: 1024px)
+    .h-md-full
+        height: calc( 100vh - 63px )
+
     .flex-lg-1
         flex: 1
 
     .w-md-30
         width: 30% !important
+
+    .w-md-50
+        width: 50% !important
 
     .w-md-45
         width: 45% !important
@@ -69,7 +73,13 @@ $spacers: (0: 0)
     .w-md-100
         width: 100% !important
 
+
+
+// Descktop
 @media only screen and (min-width: 1024px)
+    .h-lg-full
+        height: calc( 100vh - 63px )
+
     .w-lg-20
         width: 20% !important
     .w-lg-24
@@ -88,5 +98,3 @@ $spacers: (0: 0)
 
     .w-lg-100
         width: 100% !important
-
-
