@@ -18600,6 +18600,9 @@ main section:first-child .bg-slider3 {
 main .blockqoute-bg {
   background-image: url(../images/blockqoute-bg.jpg);
 }
+main .client-bg {
+  background-image: url(../images/client-bg.jpg);
+}
 main .call-bg {
   background-image: url(../images/call-bg.jpg);
 }
