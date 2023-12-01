@@ -74,6 +74,11 @@ main
                         i
                             color: var(--bs--dark)
 
+                        &:hover
+                            background: var(--bs--dark)
+                            i
+                               color: white 
+
                     &:nth-child(2)
                         position: relative
                         &::before, &::after
@@ -89,6 +94,11 @@ main
                         &::before
                             right: -72px
 
+    section:nth-child(3)
+        .item-icon:hover
+            background: #fff
+            color: var(--bs--dark)
+
     section:nth-child(4)
         h3
             position: relative
@@ -100,6 +110,27 @@ main
                 bottom: 0
                 width: 7.5%
                 border-bottom: solid 3px #1a76d1
+
+    section:nth-child(7)
+        h4:hover
+            color: var(--bs--dark)
+
+    section:nth-child(9)
+        .blog
+            position: relative
+
+            &::after
+                transition: .7s ease
+                content: ""
+                height: 2px
+                width: 0
+                position: absolute
+                bottom: 0
+                left: 0
+                background: var(--bs--dark)
+
+            &:hover::after
+                width: 100%
 
     section:nth-child(11)
         textarea
@@ -133,59 +164,32 @@ main
                         &::after, &::before
                             border: none
 
-// .sec1
-//     .alldiv
-//         height: 33rem
-//         .alldiv1
-//             height: 33rem
-//             .div11
-//                 .d2
-//                     height: 36rem
-//                     width: 56rem
-//                     h1
-//                         width: 36rem
-//                     p
-//                         width: 36rem
-//                     div
-//                         width: 32rem
-//                         .button1
-//                             width: 12rem
-//                             height: 3rem
-//                         .button2
-//                             width: 8rem
-//                             height: 3rem
-    button
-        .slide
-            width: 3rem
-            height: 3rem
+.btn-dark, .btn-darker
+    position: relative
+    transition: all .4s ease
+    transform: perspective(1px) translateZ(0)
+    border-radius: 4px
 
-@media only screen and (max-width: 426px)
+    &:before
+        content: ""
+        position: absolute
+        z-index: -1
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        transform: scaleX(0)
+        transform-origin: 50%
+        transition: all .4s ease
+        border-radius: 4px
 
-    .sec1
-        width: 100vw !important
-        height: 50vh
-        .alldiv
-            .alldiv1
-                .div11
-                    .d1
-                        width: 40rem
-                        background-size: contain
-                        background-repeat: no-repeat
-                        .d2
-                            height: 36rem
-                            width: 56rem
-                            h1
-                                font-size: x-large
-                                width: 26rem
-                            p
-                                width: 22rem
-                            div
-                                width: 26rem
-                                .button1
-                                    width: 80vw
-                                .button2
-                                    width: 80vw
-                .left
-                    display: none
-                .right
-                    display: none
+    &:hover
+        color: #fff !important
+        &:before
+            transform: scaleX(1)
+
+.btn-dark:before
+    background: var(--bs--darker) !important
+
+.btn-darker:before
+    background: var(--bs--dark) !important

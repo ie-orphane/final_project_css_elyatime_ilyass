@@ -18574,6 +18574,9 @@ textarea.form-control-lg {
     transition: 0.7s;
     visibility: hidden;
   }
+  header .nav-item:first-child a, header .nav-item:hover a {
+    color: var(--bs--dark);
+  }
   header .nav-item:first-child::after, header .nav-item:hover::after {
     visibility: visible;
     width: 90%;
@@ -18656,6 +18659,12 @@ main section:nth-child(2) .section2-container .section2-items .section2-item .it
 main section:nth-child(2) .section2-container .section2-items .section2-item .item-icon i {
   color: var(--bs--dark);
 }
+main section:nth-child(2) .section2-container .section2-items .section2-item .item-icon:hover {
+  background: var(--bs--dark);
+}
+main section:nth-child(2) .section2-container .section2-items .section2-item .item-icon:hover i {
+  color: white;
+}
 main section:nth-child(2) .section2-container .section2-items .section2-item:nth-child(2) {
   position: relative;
 }
@@ -18672,6 +18681,10 @@ main section:nth-child(2) .section2-container .section2-items .section2-item:nth
 main section:nth-child(2) .section2-container .section2-items .section2-item:nth-child(2)::before {
   right: -72px;
 }
+main section:nth-child(3) .item-icon:hover {
+  background: #fff;
+  color: var(--bs--dark);
+}
 main section:nth-child(4) h3, main section:nth-child(4) .h3 {
   position: relative;
   padding-bottom: 0.75rem;
@@ -18683,6 +18696,25 @@ main section:nth-child(4) h3::before, main section:nth-child(4) .h3::before {
   bottom: 0;
   width: 7.5%;
   border-bottom: solid 3px #1a76d1;
+}
+main section:nth-child(7) h4:hover, main section:nth-child(7) .h4:hover {
+  color: var(--bs--dark);
+}
+main section:nth-child(9) .blog {
+  position: relative;
+}
+main section:nth-child(9) .blog::after {
+  transition: 0.7s ease;
+  content: "";
+  height: 2px;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--bs--dark);
+}
+main section:nth-child(9) .blog:hover::after {
+  width: 100%;
 }
 main section:nth-child(11) textarea {
   resize: none;
@@ -18709,43 +18741,40 @@ main section:nth-child(11) textarea {
     border: none;
   }
 }
-@media only screen and (max-width: 426px) {
-  .sec1 {
-    width: 100vw !important;
-    height: 50vh;
-  }
-  .sec1 .alldiv .alldiv1 .div11 .d1 {
-    width: 40rem;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  .sec1 .alldiv .alldiv1 .div11 .d1 .d2 {
-    height: 36rem;
-    width: 56rem;
-  }
-  .sec1 .alldiv .alldiv1 .div11 .d1 .d2 h1, .sec1 .alldiv .alldiv1 .div11 .d1 .d2 .h1 {
-    font-size: x-large;
-    width: 26rem;
-  }
-  .sec1 .alldiv .alldiv1 .div11 .d1 .d2 p {
-    width: 22rem;
-  }
-  .sec1 .alldiv .alldiv1 .div11 .d1 .d2 div {
-    width: 26rem;
-  }
-  .sec1 .alldiv .alldiv1 .div11 .d1 .d2 div .button1 {
-    width: 80vw;
-  }
-  .sec1 .alldiv .alldiv1 .div11 .d1 .d2 div .button2 {
-    width: 80vw;
-  }
-  .sec1 .alldiv .alldiv1 .left {
-    display: none;
-  }
-  .sec1 .alldiv .alldiv1 .right {
-    display: none;
-  }
+.btn-dark, .btn-darker {
+  position: relative;
+  transition: all 0.4s ease;
+  transform: perspective(1px) translateZ(0);
+  border-radius: 4px;
 }
+.btn-dark:before, .btn-darker:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+  transform-origin: 50%;
+  transition: all 0.4s ease;
+  border-radius: 4px;
+}
+.btn-dark:hover, .btn-darker:hover {
+  color: #fff !important;
+}
+.btn-dark:hover:before, .btn-darker:hover:before {
+  transform: scaleX(1);
+}
+
+.btn-dark:before {
+  background: var(--bs--darker) !important;
+}
+
+.btn-darker:before {
+  background: var(--bs--dark) !important;
+}
+
 footer h4::after, footer .h4::after {
   content: "";
   border-bottom: solid 3px white;
@@ -18765,6 +18794,9 @@ footer input {
 }
 footer input::placeholder {
   color: white;
+}
+footer button:hover {
+  color: var(--bs--darker) !important;
 }
 
 @media only screen and (min-width: 1024px) {
